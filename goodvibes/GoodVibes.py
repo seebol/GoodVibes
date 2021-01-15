@@ -402,7 +402,7 @@ class calc_bbe:
                         self.mult = 1
                 # Grab molecular mass
                 elif line.strip().find('mol. weight') != -1:
-                    molecular_mass = float(line.strip().split()[-1][0:-1])
+                    molecular_mass = float(line.strip().split('=')[-1][0:-1])
                 # Grab rational symmetry number
                 elif line.strip().find('symmetry #') != -1:
                     symmno = int(line.strip().split()[-1][0:-1])
